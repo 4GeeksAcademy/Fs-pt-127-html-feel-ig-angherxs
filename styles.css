@@ -1,3 +1,4 @@
+/* ESTILOS GLOBALES Y DEL BODY */
 body {
     background-color: black; 
     display: flex; 
@@ -6,22 +7,25 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+    color: #333; /* Color de texto general */
 }
 
+/* CONTENEDOR PRINCIPAL DEL POST */
 .post-container {
     width: 400px;
+    /* Ajuste para que se vea exactamente como el de la imagen */
     background-color: white;
     border: 1px solid rgb(235, 235, 235); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
 }
 
+/* HEADER DEL POST */
 .post-header {
     display: flex; 
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
-    border-bottom: 1px solid #eee; 
 }
 
 .user-info {
@@ -29,36 +33,43 @@ body {
     align-items: center;
 }
 
+/* LOGO DEL USUARIO */
 .logo-placeholder {
-    width: 30px;
-    height: 30px;
+    width: 35px; /* Ligeramente más grande */
+    height: 35px;
     border-radius: 50%; 
-    background-color: #333; 
-    color: white;
+    background-color: white; /* Fondo blanco */
+    border: 1px solid #333; /* Borde para simular el avatar */
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.8em;
-    font-weight: bold;
+    font-size: 1.2em; /* Icono un poco más grande */
     margin-right: 10px;
 }
 
+/* TEXTO DEL NOMBRE DE USUARIO */
 .username {
     font-weight: bold;
     font-size: 0.9em;
+    line-height: 1; /* Asegura que el texto multilinea quede bien */
 }
 
+/* ICONO DE MENÚ DE PUNTOS */
 .menu-dots {
     color: #333;
     font-size: 1.2em;
     cursor: pointer;
 }
 
+/* IMAGEN DEL POST */
 .post-image img {
     width: 100%; 
     display: block; 
+    /* La imagen en la foto es cuadrada, este estilo es suficiente */
 }
 
+/* CONTENEDOR DE ACCIONES (LIKES, COMENTARIOS, ETC.) */
 .post-actions-container {
     display: flex;
     justify-content: space-between; 
@@ -72,27 +83,35 @@ body {
 }
 
 .icon {
-    font-size: 1.4em;
+    font-size: 1.5em; /* Ligeramente más grande para coincidir con la imagen */
+    color: #333;
     cursor: pointer; 
-    transition: color 0.2s;
+    transition: opacity 0.2s;
 }
 
 .icon:hover {
     opacity: 0.7;
 }
 
+/* CONTENIDO DE TEXTO (LIKES Y DESCRIPCIÓN) */
 .post-text-content {
     padding: 0 15px 15px 15px;
 }
 
 .likes-count {
-    font-weight: bold;
+    /* El "Liked by" no está en negrita en el CSS anterior, lo corregimos */
+    font-weight: normal; 
     margin-bottom: 5px;
     font-size: 0.9em;
+}
+
+.likes-count strong {
+    font-weight: bold;
 }
 
 .description {
     line-height: 1.4; 
     font-size: 0.9em;
-    text-align: justify; 
+    /* Quitamos el justify para que el texto se alinee a la izquierda como en Instagram */
+    text-align: left; 
 }
